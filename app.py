@@ -51,7 +51,7 @@ tf.compat.v1.keras.backend.set_session(sess)
 
 global model
 #model =load_model('model_test.h5', compile=False)
-model = tf.keras.models.load_model('pkmn_all_v6.h5', compile=False)
+model = tf.keras.models.load_model('pkmn_all_v9.h5', compile=False)
 
 global graph
 graph = tf.compat.v1.get_default_graph()
