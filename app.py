@@ -51,7 +51,7 @@ tf.compat.v1.keras.backend.set_session(sess)
 
 global model
 #model =load_model('model_test.h5', compile=False)
-model = tf.keras.models.load_model('pkmn_all_v9.h5', compile=False)
+model = tf.keras.models.load_model('model_test.h5', compile=False)
 
 global graph
 graph = tf.compat.v1.get_default_graph()
@@ -62,7 +62,7 @@ def demos_page():
     if request.method == 'POST':
         file = request.files['file']
         filename = secure_filename(file.filename)
-        file.save(os.path.join('uploads', filename))
+        file.save(os.path.join('static/uploads/', filename))
         return redirect(url_for('prediction', filename=filename))
     return render_template('demos.html')
 
@@ -80,7 +80,7 @@ def prediction(filename):    #go to the web page "prediction"
 
     #Step 2
     #img = resize(my_img, (img_height, img_width, 3))
-    picture_path = str('uploads/'+filename)
+    picture_path = str('static/uploads/'+filename)
 
     img = image.load_img(picture_path, target_size=(img_height, img_width))
     img_array = image.img_to_array(img)
@@ -91,7 +91,7 @@ def prediction(filename):    #go to the web page "prediction"
     predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
 
-    class_names = ['Abra', 'Aerodactyl', 'Alakazam', 'Arbok', 'Arcanine', 'Articuno', 'Beedrill', 'Bellsprout', 'Blastoise', 'Bulbasaur', 'Butterfree', 'Caterpie', 'Chansey', 'Charizard', 'Charmander', 'Charmeleon', 'Clefable', 'Clefairy', 'Cloyster', 'Cubone', 'Dewgong', 'Diglett', 'Ditto', 'Dodrio', 'Doduo', 'Dragonair', 'Dragonite', 'Dratini', 'Drowzee', 'Dugtrio', 'Eevee', 'Ekans', 'Electabuzz', 'Electrode', 'Exeggcute', 'Exeggutor', 'Farfetchd', 'Fearow', 'Flareon', 'Gastly', 'Gengar', 'Geodude', 'Gloom', 'Golbat', 'Goldeen', 'Golduck', 'Golem', 'Graveler', 'Grimer', 'Growlithe', 'Gyarados', 'Haunter', 'Hitmonchan', 'Hitmonlee', 'Horsea', 'Hypno', 'Ivysaur', 'Jigglypuff', 'Jolteon', 'Jynx', 'Kabuto', 'Kabutops', 'Kadabra', 'Kakuna', 'Kangaskhan', 'Kingler', 'Koffing', 'Krabby', 'Lapras', 'Lickitung', 'Machamp', 'Machoke', 'Machop', 'Magikarp', 'Magmar', 'Magnemite', 'Magneton', 'Mankey', 'Marowak', 'Meowth', 'Metapod', 'Mew', 'Mewtwo', 'Moltres', 'MrMime', 'Muk', 'Nidoking', 'Nidoqueen', 'Nidorina', 'Nidorino', 'Ninetales', 'Oddish', 'Omanyte', 'Omastar', 'Onix', 'Paras', 'Parasect', 'Persian', 'Pidgeot', 'Pidgeotto', 'Pidgey', 'Pikachu', 'Pinsir', 'Poliwag', 'Poliwhirl', 'Poliwrath', 'Ponyta', 'Porygon', 'Primeape', 'Psyduck', 'Raichu', 'Rapidash', 'Raticate', 'Rattata', 'Rhydon', 'Rhyhorn', 'Sandshrew', 'Sandslash', 'Scyther', 'Seadra', 'Seaking', 'Seel', 'Shellder', 'Slowbro', 'Slowpoke', 'Snorlax', 'Spearow', 'Squirtle', 'Starmie', 'Staryu', 'Tangela', 'Tauros', 'Tentacool', 'Tentacruel', 'Vaporeon', 'Venomoth', 'Venonat', 'Venusaur', 'Victreebel', 'Vileplume', 'Voltorb', 'Vulpix', 'Wartortle', 'Weedle', 'Weepinbell', 'Weezing', 'Wigglytuff', 'Zapdos', 'Zubat']
+    class_names = ['Chansey', 'Jigglypuff', 'Kabuto']
 
     #predictions = ("This image most likely belongs to {} with a {:.2f} percent confidence.".format(class_names[np.argmax(score)], 100 * np.max(score)))
         
@@ -103,7 +103,15 @@ def prediction(filename):    #go to the web page "prediction"
         #"picture":picture_path,
       }   
     #Step 5
-    return render_template('predict.html', predictions=predictions)
+
+    url_img_for_html = str("../static/uploads/"+filename)
+    print(url_img_for_html)
+
+    path = {
+        "url_to_upload":url_img_for_html
+    }
+
+    return render_template('predict.html', predictions=predictions, path=path)
     #return render_template('predict.html')
     #return render_template('predict.html')
 
