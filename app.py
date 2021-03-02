@@ -27,9 +27,9 @@ def blog():
 def contact():
     return render_template('contact.html')
 
-@app.route("/report.html")
+@app.route("/reports.html")
 def report():
-    return render_template('report.html') 
+    return render_template('reports.html') 
 
 @app.route("/report1.html")
 def report1():
@@ -42,6 +42,10 @@ def report2():
 @app.route("/report3.html")
 def report3():
     return render_template('report3.html')
+
+@app.route("/report4.html")
+def report4():
+    return render_template('report4.html')
 
 # Loading the model
 print("Loading model")
