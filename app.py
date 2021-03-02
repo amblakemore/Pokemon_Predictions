@@ -27,9 +27,9 @@ def blog():
 def contact():
     return render_template('contact.html')
 
-@app.route("/report.html")
+@app.route("/reports.html")
 def report():
-    return render_template('report.html') 
+    return render_template('reports.html') 
 
 @app.route("/report1.html")
 def report1():
@@ -42,6 +42,10 @@ def report2():
 @app.route("/report3.html")
 def report3():
     return render_template('report3.html')
+
+@app.route("/report4.html")
+def report4():
+    return render_template('report4.html')
 
 # Loading the model
 print("Loading model")
@@ -106,11 +110,16 @@ def prediction(filename):    #go to the web page "prediction"
     url_img_for_html = str("../static/uploads/"+filename)
     print(url_img_for_html)
 
+<<<<<<< HEAD
     #path to  the uploaded image
+=======
+    #Path to Uploaded picture
+>>>>>>> f652f901ea3813731450a3fcdaf17f76307ee444
     path = {
         "url_to_upload":url_img_for_html
     }
 
+<<<<<<< HEAD
     #path to the predicted image
     predicted_pokemon = str(class_names[np.argmax(score)])
     url_img_for_html_predicted = str("../static/pokemon_library/"+predicted_pokemon+".jpg")
@@ -120,6 +129,17 @@ def prediction(filename):    #go to the web page "prediction"
     }
 
     return render_template('predict.html', predictions=predictions, path=path, path_predicted=path_predicted)
+=======
+    #path to predicted pokemon image
+    predicted_pokemon = str(class_names[np.argmax(score)])
+    url_img_for_html_predicted = str("../static/pokemon_library/"+predicted_pokemon+".jpg")
+
+    path_to_predicted = {
+        "url_to_upload_predicted":url_img_for_html_predicted
+    }
+
+    return render_template('predict.html', predictions=predictions, path=path, path_to_predicted=path_to_predicted)
+>>>>>>> f652f901ea3813731450a3fcdaf17f76307ee444
     #return render_template('predict.html')
     #return render_template('predict.html')
 

@@ -40,11 +40,12 @@
                 <a class="nav-link active" href="{{ url_for('demos_page') }}">Demos</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="{{ url_for('report') }}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                <a class="nav-link dropdown-toggle " href="{{ url_for('report') }}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Project</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="{{ url_for('report1') }}">Report 1</a>
-                  <a class="dropdown-item" href="{{ url_for('report2') }}">Report 2</a>
-                  <a class="dropdown-item" href="{{ url_for('report3') }}">Report 3</a>
+                  <a class="dropdown-item" href="report1.html">Machine Learning</a>
+                  <a class="dropdown-item" href="report2.html">Iterations</a>
+                  <a class="dropdown-item" href="report3.html">Behind the Scenes</a>
+                  <a class="dropdown-item" href="report4.html">Lessons Learned</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -105,10 +106,17 @@
               <div class="media-body">
                 <h3 class="mt-0 text-black">Uploaded Image</h3>
             </div>
+<<<<<<< HEAD
             <br>
             <br>
             <div class="media d-block media-custom text-center">
               <a href="#"><img src="{{path_predicted.url_to_upload_predicted}}" alt="Image Placeholder" class="img-fluid"></a>
+=======
+            
+            <br>
+            <div class="media d-block media-custom text-center">
+              <a href="#"><img src="{{path_to_predicted.url_to_upload_predicted}}" alt="Image Placeholder" class="img-fluid"></a>
+>>>>>>> f652f901ea3813731450a3fcdaf17f76307ee444
               <div class="media-body">
                 <h3 class="mt-0 text-black">Predicted Pokémon</h3>
             </div>

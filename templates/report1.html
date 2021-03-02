@@ -40,11 +40,12 @@
                 <a class="nav-link active" href="demos.html">Demos</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="reports.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                <a class="nav-link dropdown-toggle " href="reports.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Project</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="report1.html">Report 1</a>
-                  <a class="dropdown-item" href="report2.html">Report 2</a>
-                  <a class="dropdown-item" href="report3.html">Report 3</a>
+                  <a class="dropdown-item" href="report1.html">Machine Learning</a>
+                  <a class="dropdown-item" href="report2.html">Iterations</a>
+                  <a class="dropdown-item" href="report3.html">Behind the Scenes</a>
+                  <a class="dropdown-item" href="report4.html">Lessons Learned</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -88,11 +89,67 @@
             <h2 class=" heading mb-4">Project Overview</h2>
             <p class="mb-5 lead">Lorem ipsum</p>
 
+<<<<<<< HEAD
             <p class="mb-5 lead">Lorem ipsum</p>
 
             <p class="mb-5 lead">Lorem ipsum</p>
 
             <p class="mb-5 lead">Lorem ipsum</p>
+=======
+            <h4 class=" heading mb-4">Preprocessing the Data</h2>
+            <p class="mb-5 lead">Before any training, we need to prep our data. 
+              Not only do we want to make sure we read the images, we also want to perform some Image data augmentation.
+              Image data augmentation is used to expand the training dataset in order to improve the performance and ability of the model to generalize.
+            </p>
+            <img src="../static/images/data_augmentation.jpg" width=500>
+            <p></p>
+            <img src="../static/images/data_augmentation_sample.jpg" width=500>
+
+            <br>
+            <br>
+            <br>
+
+            <h4 class=" heading mb-4">Create the model</h2>
+              <p class="mb-5 lead">The Sequential model is a linear stack of layers.  It is the simplest model for beginners to start with for neural
+                networks that are composed of a single stack of layers connected sequentially.
+              </p>
+              <img src="../static/images/model.jpg" width=600>
+          
+            <br>
+            <br>
+            <br>
+
+            <h4 class=" heading mb-4">Compile and train the model</h2>
+            <p class="mb-5 lead">Before we train our model, we will implement the Keras EarlyStopping method.
+              This will stop the training as soon as the validation error reaches a minimum as defined by the patience variable.
+            </p>
+            <img src="../static/images/callback.jpg">
+            <br>
+            <br>
+            <p class="mb-5 lead">Below, we set max epochs to 100 however the model stops at epoch 78 because of the EarlyStopping validation we implemented above.</p>
+            <img src="../static/images/train_model.jpg">
+            <br>
+            <br>
+            <p class="mb-5 lead">Ideally, we would stop the training as soon as the validation error reaches a minimum.
+              When the validation error stops decreasing and starts to go back up, it is an indication that the model started to overfit the training data.
+              If our model does much better on the training set than on the test set, then we are probably overfitting the data.
+            </p>
+            <img src="../static/images/early-stopping-graphic.jpg">
+
+            <br>
+            <br>
+            <br>
+
+            <h4 class=" heading mb-4">Training Results</h2>
+              <p class="mb-5 lead">With the help of plotly, we are able to visualize our training and validation results by epoch from beginning to end.  Let's take a look!
+              </p>  
+            <img src="../static/images/accuracy_v14.png" width=600 height=400>
+            <br>
+            <br>
+            <img src="../static/images/loss_v14.png" width=600 height=400>
+            <p class="mb-5 lead">more text here soon...</p>
+        
+>>>>>>> f652f901ea3813731450a3fcdaf17f76307ee444
           </div>
         </div>
       </div>
