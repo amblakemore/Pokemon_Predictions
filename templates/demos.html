@@ -92,14 +92,15 @@
             <br>
             <form method=post enctype=multipart/form-data>
               <p class="text-dark">
-                 <input type=file name=file>
+                 <input type=file name=file accept="image/*" id="file" onchange="loadFile(event)" style="display: none;">
+                 <!--<p><input type="file" name="image"></p>-->
+                 <p><label for="file" style="cursor: pointer;">Choose Image</label></p>
+                 <p><img id="output" width="200"/></p>
                  <input type=submit value=Upload>
               </p>
             </form> 
             <br>
-            <br>       
-            
-           
+            <br>
           </div>
         </div>
       </div>
@@ -152,7 +153,12 @@
 
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
-
+    <script>
+      var loadFile = function(event) {
+         var image = document.getElementById('output');
+         image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
     <script src="../static/js/jquery-3.2.1.min.js"></script>
     <script src="../static/js/popper.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
