@@ -100,6 +100,19 @@
                 </table> <a href="{{ url_for('demos_page') }}"><button class="button mt-3">Try again?</button></a>
             <br>
             <br>
+            <div class="media d-block media-custom text-center">
+              <a href="#"><img src="{{path.url_to_upload}}" alt="Image Placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Uploaded Image</h3>
+            </div>
+            
+            <br>
+            <div class="media d-block media-custom text-center">
+              <a href="#"><img src="{{path_to_predicted.url_to_upload_predicted}}" alt="Image Placeholder" class="img-fluid"></a>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">Predicted Pokémon</h3>
+            </div>
+
           </div>
         </div>
       </div>
