@@ -106,11 +106,20 @@ def prediction(filename):    #go to the web page "prediction"
     url_img_for_html = str("../static/uploads/"+filename)
     print(url_img_for_html)
 
+    #Path to Uploaded picture
     path = {
         "url_to_upload":url_img_for_html
     }
 
-    return render_template('predict.html', predictions=predictions, path=path)
+    #path to predicted pokemon image
+    predicted_pokemon = str(class_names[np.argmax(score)])
+    url_img_for_html_predicted = str("../static/pokemon_library/"+predicted_pokemon+".jpg")
+
+    path_to_predicted = {
+        "url_to_upload_predicted":url_img_for_html_predicted
+    }
+
+    return render_template('predict.html', predictions=predictions, path=path, path_to_predicted=path_to_predicted)
     #return render_template('predict.html')
     #return render_template('predict.html')
 
