@@ -123,9 +123,18 @@ def prediction(filename):    #go to the web page "prediction"
         "url_to_upload_predicted":url_img_for_html_predicted
     }
 
-    return render_template('predict.html', predictions=predictions, path=path, path_to_predicted=path_to_predicted)
+    #Official page in official web-site:
+
+    url_to_official_page = str("https://www.pokemon.com/us/pokedex/"+predicted_pokemon)
+
+    path_to_official_page = {
+        "url_to_pokemon_page":url_to_official_page
+    }
+
+    return render_template('predict.html', predictions=predictions, path=path, path_to_predicted=path_to_predicted, path_to_official_page=path_to_official_page)
     #return render_template('predict.html')
     #return render_template('predict.html')
+
 
 
 if __name__ == '__main__':
