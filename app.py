@@ -55,7 +55,7 @@ tf.compat.v1.keras.backend.set_session(sess)
 
 global model
 #model =load_model('model_test.h5', compile=False)
-model = tf.keras.models.load_model('pkmn_all_v14_b256.h5', compile=False)
+model = tf.keras.models.load_model('pkmn_all_v9.h5', compile=False)
 
 global graph
 graph = tf.compat.v1.get_default_graph()
@@ -110,26 +110,11 @@ def prediction(filename):    #go to the web page "prediction"
     url_img_for_html = str("../static/uploads/"+filename)
     print(url_img_for_html)
 
-<<<<<<< HEAD
-    #path to  the uploaded image
-=======
     #Path to Uploaded picture
->>>>>>> f652f901ea3813731450a3fcdaf17f76307ee444
     path = {
         "url_to_upload":url_img_for_html
     }
 
-<<<<<<< HEAD
-    #path to the predicted image
-    predicted_pokemon = str(class_names[np.argmax(score)])
-    url_img_for_html_predicted = str("../static/pokemon_library/"+predicted_pokemon+".jpg")
-
-    path_predicted = {
-        "url_to_upload_predicted":url_img_for_html_predicted
-    }
-
-    return render_template('predict.html', predictions=predictions, path=path, path_predicted=path_predicted)
-=======
     #path to predicted pokemon image
     predicted_pokemon = str(class_names[np.argmax(score)])
     url_img_for_html_predicted = str("../static/pokemon_library/"+predicted_pokemon+".jpg")
@@ -139,7 +124,6 @@ def prediction(filename):    #go to the web page "prediction"
     }
 
     return render_template('predict.html', predictions=predictions, path=path, path_to_predicted=path_to_predicted)
->>>>>>> f652f901ea3813731450a3fcdaf17f76307ee444
     #return render_template('predict.html')
     #return render_template('predict.html')
 
