@@ -86,35 +86,47 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-8 text-center" >
-            <h2 class=" heading mb-4">Your Prediction! <Section></Section></h2>
+            <h2 class=" heading mb-4" style = "font-size: 50px;">Your Prediction! <Section></Section></h2>
             <br>
-            <br>
-            <table class="table-bordered" style="width:100%">
-                <tr>
-                  <th>Pokémon</th>
-                  <th>Probability (%)</th>
-                </tr>
-                <tr>
-                  <td>{{ predictions.class1 }}</td>
-                  <td>{{ predictions.prob1 }}</td>
-                </tr>
-                </table> <a href="{{ url_for('demos_page') }}"><button class="button mt-3">Try again?</button></a>
-            <br>
-            <br>
-            <div class="media d-block media-custom text-center">
-              <a href="#"><img src="{{path.url_to_upload}}" alt="Image Placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <h3 class="mt-0 text-black">Uploaded Image</h3>
-            </div>
-            
-            <br>
-            <div class="media d-block media-custom text-center">
-              <a href="#"><img src="{{path_to_predicted.url_to_upload_predicted}}" alt="Image Placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <h3 class="mt-0 text-black">Predicted Pokémon</h3>
-            </div>
 
+            <table class="table-bordered" style="width:100%; table-layout: fixed; font-size: 20px; border:solid 3px rgb(226, 101, 29);">
+                <tr>
+                  <th class="mt-0 text-black" style="width: 50%; background-color:rgb(226, 101, 29);">Pokémon</th>
+                  <th class="mt-0 text-black" style="background-color:rgb(226, 101, 29);">Probability (%)</th>
+                </tr>
+                <tr>
+                  <td class="mt-0 text-black">{{ predictions.class1 }}</td>
+                  <td class="mt-0 text-black">{{ predictions.prob1 }}</td>
+                </tr>
+                </table>
+                <br>
+                <br>
+                <br>
+
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="media d-block media-custom text-center">
+                <a href="#"><img src="{{path.url_to_upload}}" alt="Image Placeholder" class="img-fluid" style="width:350px;height:350px; border:5px solid rgb(226, 101, 29);"></a>
+                <div class="media-body">
+                  <h3 class="mt-0 text-black">Uploaded Image</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="media d-block media-custom text-center">
+                <a href="{{path_to_official_page.url_to_pokemon_page}}"><img src="{{path_to_predicted.url_to_upload_predicted}}" alt="Image Placeholder" class="img-fluid" style="width:350px;height:350px; border:5px solid  rgb(226, 101, 29);"></a>
+                <div class="media-body">
+                  <h3 class="mt-0 text-black">Predicted Pokémon</h3>
+                  <h6 class="mt-0 text-black">(click image and learn more about {{ predictions.class1 }} )</h6>
+                </div>
+              </div>
+            </div>
           </div>
+          <a href="{{ url_for('demos_page') }}"><button class="button mt-3" style="font-size: 20px; width:350px; height:70px">
+            <h3 class="mt-0 text-black" >Try again?</h3>
+          </button></a>
+          <br>
         </div>
       </div>
       
