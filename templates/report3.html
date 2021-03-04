@@ -23,7 +23,7 @@
     <header role="banner">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand " href="index1.html">Pokémon Predictions</a>
+          <a class="navbar-brand " href="index.html">Pokémon Predictions</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarsExample05">
             <ul class="navbar-nav pl-md-5 ml-auto">
               <li class="nav-item">
-                <a class="nav-link " href="index1.html">Home</a>
+                <a class="nav-link " href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -87,10 +87,65 @@
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-8 text-left">
             <h2 class=" heading mb-4">Model Deployment</h2>
-            <p class="mb-5 lead">Lorem ipsum</p>
+            <p class="mb-5 lead">Presented Machine Learning Algorithm was created using Google Colaboratory (Colab). 
+              Colab notebooks execute arbitrary python code on Google's cloud servers and and is especially well suited to machine learning processes.
+              Therefore, give us opportunity to traing our model with more than 7,000 images.</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="media d-block media-custom text-center">
+                    <a href="#"><img src="../static/images/colab_logo.png" alt="Image Placeholder" class="img-fluid" style="height:70px;"></a>
+                    <div class="media-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="media d-block media-custom text-center">
+                    <a href="#"><img src="../static/images/google_cloud_logo.png" alt="Image Placeholder" class="img-fluid" style="height:60px;"></a>
+                    <div class="media-body">
+                    </div>
+                  </div>
+                </div>
+            <p class="mb-5 lead"> To use trained model in our website, the model was saved in .h5 format. This saved model was Then it was loaded with Tensorflow, Keras and Flask.
+              Note: versions of Tensorflow and Keras in the virtual environment (where flask python file will be excecuted) should be the same versions (or higher) as in Colab where model was trained and saved.
+            </p>   
+            
+            <div class="row">
+              <div class="col-md-8">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/dep_1.png" alt="Image Placeholder" class="img-fluid" style="width:750px;"></a>
+                  <a href="#"><img src="../static/images/det_2.png" alt="Image Placeholder" class="img-fluid" style="width:750px;"></a>
+                  <div class="media-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
 
-            <h2 class=" heading mb-4">Hosting the Application</h2>
-            <p class="mb-5 lead">Lorem ipsum</p>
+            <p class="mb-5 lead"> To make sure that our model was saved correctly and it is the same model from the Colab notebook, the weights of original model and saved copy were compared.</p> 
+            <div class="row">
+              <div class="col-md-8">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/dep_3.png" alt="Image Placeholder" class="img-fluid" style="width:750px;"></a>
+                  <div class="media-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="mb-5 lead"> After this, model was loaded and used for predictions. 
+              Check Demo page to try it!!!</p> 
+            <div class="row">
+              <div class="col-md-8">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/dep_4.png" alt="Image Placeholder" class="img-fluid" style="width:750px;"></a>
+                  <div class="media-body">
+                  </div>
+                </div>
+              </div>
+            </div>            
+
+
 
    
           
