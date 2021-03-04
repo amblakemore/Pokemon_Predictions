@@ -15,6 +15,10 @@ app = Flask(__name__)
 def homepage():
     return render_template('index.html')
 
+@app.route("/index1.html")
+def homepage1():
+    return render_template('index1.html')
+
 @app.route("/about.html")
 def aboutus():
     return render_template('about.html')
