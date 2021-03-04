@@ -23,7 +23,7 @@
     <header role="banner">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand " href="index.html">Pokémon Predictions</a>
+          <a class="navbar-brand " href="index1.html">Pokémon Predictions</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarsExample05">
             <ul class="navbar-nav pl-md-5 ml-auto">
               <li class="nav-item">
-                <a class="nav-link " href="index.html">Home</a>
+                <a class="nav-link " href="index1.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -94,8 +94,20 @@
             <h4 class=" heading mb-4">Collecting the Data</h2>
             <p class="mb-5 lead">This was easy since Pokémon data is pretty much everywhere.  We found this <a href="https://www.kaggle.com/lantian773030/pokemonclassification">Kaggle dataset by Lance Zhang</a> that had everything we needed.
               149 classes of Pokémon from generation one totaling over 7,000 images.  That's roughly 25-50 images per Pokémon for our training model to work with.  No web scraping required! </p>
-              
-          
+              <p class="mb-5 lead">To prepare the images used to train our model, we started by reviewing and cleaning the images from the original dataset.</p>
+              <ul class="mb-5 lead">
+                <li>Any image that was irrelevant to the classification</li>
+                <li>Any image with multiple Pokemon in the image</li>
+                <li>Any images of a "Mega Evolution"</li>
+              </ul>
+              <p class="mb-5 lead">In order to properly recognize each Pokemon as a specific class, each Pokemon was assigned a specific folder in a 
+                larger data set folder. This allowed us to load the images into the model and begin the training.
+              </p>
+              <img src="../static/images/folder_structure.jpg" width=700> 
+
+            <br>
+            <br>
+            <br>
 
             <h4 class=" heading mb-4">Preprocessing the Data</h2>
             <p class="mb-5 lead">Before any training, we need to prep our data. 
