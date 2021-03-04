@@ -72,7 +72,11 @@
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
               <h1 class="pt-5"><span>Iterations</span></h1>
+<<<<<<< HEAD
               <p class="mb-5 w-75 pl-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+=======
+              <p class="mb-5 w-75 pl-0">Our Machine Learning Tuning Journey</p>
+>>>>>>> b7a480fd6e148ad5b87c09195275a9faaa3b02f3
             </div>
           </div>
         </div>
@@ -84,19 +88,87 @@
     
     <section class="section border-t pb-0">
       <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
-          <div class="col-md-8 text-center">
-            <h2 class=" heading mb-4">Project Overview</h2>
-            <p class="mb-5 lead">Lorem ipsum</p>
+        <!-- <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-12 text-left">
+            <h2 class=" heading mb-4">Tuning Iterations</h2>
+            <p class="mb-5 lead">Lorem ipsum</p> -->
+           
+            <!-- Round 1 -->
+            <div class="row justify-content-center mb-5 element-animate">
+              <div class="col--8 text-left">
+                <h2 class="heading mb-4">Round 1</h2>
+                <p class="mb-5 lead">With our first model, we achieved a training accuracy near 100%, but a validation accuracy of only about 30%.  Yikes!
+                  Also note that our training and validation didn't really do much better after the 10th epoch! Large gaps between the training and test loss are signs of overfitting and in this case we had a gap of 80%.
+                  What could we do better in the next round?</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/accuracy_v6_noPreprocessing.png" alt="Image Placeholder" class="img-fluid"></a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/loss_v6_noPreprocessing.png" alt="Image Placeholder" class="img-fluid"></a>
+                  <div class="media-body">
+                   
+                  </div>
+                </div>
+              </div>  
 
-            <p class="mb-5 lead">Lorem ipsum</p>
-
-            <p class="mb-5 lead">Lorem ipsum</p>
-
-            <p class="mb-5 lead">Lorem ipsum</p>
-          </div>
-        </div>
+            <!-- Round 2 -->
+              <div class="row justify-content-center mb-5 element-animate">
+                <div class="col--8 text-left">
+                  <h2 class="heading mb-4">Round 2</h2>
+                  <p class="mb-5 lead">In this round, we achieved a training accuracy of about 75% and a training accuracy of about 40%.  
+                    Overtime, we can see that the training model steadily improved in accuracy and we managed to more than halve the training and testing loss gap.</p>
+                  <p class="mb-5 lead">What did we do different?  Well, we added Data Augmentation into the mix and introduced an EarlyStopping feature.  
+                    But how could we increase the training accuracy and minimize the loss gap further? Let's add more CNN layers in the next round and see what happens! </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="media d-block media-custom text-center">
+                    <a href="#"><img src="../static/images/accuracy_v14.png" alt="Image Placeholder" class="img-fluid"></a>
+                    <div class="media-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="media d-block media-custom text-center">
+                    <a href="#"><img src="../static/images/loss_v14.png" alt="Image Placeholder" class="img-fluid"></a>
+                    <div class="media-body">
+                    </div>
+                  </div>
+                </div>   
+            
+            <!-- Round 3 -->
+            <div class="row justify-content-center mb-5 element-animate">
+              <div class="col--8 text-left">
+                <h2 class="heading mb-4">Round 3</h2>
+                <p class="mb-5 lead">In this round, we achieved a training accuracy of about 27% and testing accuracy of about 20%.  
+                  We set max_epochs to 100 so it didn't go beyond 100 epochs but this is looking more like what we want to see. </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/accuracy_v17_b256.png" alt="Image Placeholder" class="img-fluid"></a>
+                  <div class="media-body">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="media d-block media-custom text-center">
+                  <a href="#"><img src="../static/images/loss_v17_b256.png" alt="Image Placeholder" class="img-fluid"></a>
+                  <div class="media-body">
+                  </div>
+                </div>
+              </div>  
       </div>
+      
+
       
     <!-- END .block-4 -->
     </section>
