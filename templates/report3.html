@@ -115,11 +115,20 @@
             <br>
             <br>
             <p class="mb-5 lead" > Please, check our Demo page to try it!!!</p>
+            <br>
+            <hr>
+            <h2 class=" heading mb-4">Heroku Deployment</h2>
+            <p class="mb-5 lead">Using Heroku has proven to be convenient and efficient. The steps taken to deploy on Heroku's cloud based platform service were:</p>
+            <ul class="mb-5 lead">
+              <li>create heroku acct and link github repo</li>
+              <li>made sure we had all required files and folder structure</li>
+              <li>procfile, requirements.txt, .slugignore(if too much memory is used)</li>
+              <li>tensorflow 2.4.1 took up 400 mb</li>
+              <li>found a loophole, by using tensorflow-cpu so we didnt reach the 500mb max</li>
+              <li>another way was too add .slugignore file for any unused files</li>
+              <li>after multiple deploys, it finally ran perfectly</li>
+            </ul>
 
-
-
-   
-          
           </div>
         </div>
       </div>
