@@ -72,7 +72,7 @@
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
               <h1 class="pt-5"><span>Behind the Scenes</span></h1>
-              <p class="mb-5 w-75 pl-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p class="mb-5 w-75 pl-0">A Deeper Look into Our Model Deployment.</p>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
               <br>
               <br>
               <br>
-            <p class="mb-5 lead">Mashine Learning model was created using Tensorflow and Keras. 
+            <p class="mb-5 lead">Machine Learning model was created using Tensorflow and Keras. 
                 TensorFlow is a free and open-source software library for machine learning, whereas Keras is an open-source library that provides a Python interface for artificial neural networks. 
                 Keras acts as an interface for the TensorFlow library.</p>
             <p class="mb-5 lead"> To use trained model in our website, the model was saved and then loaded with Tensorflow, Keras and Flask.
@@ -115,11 +115,20 @@
             <br>
             <br>
             <p class="mb-5 lead" > Please, check our Demo page to try it!!!</p>
+            <br>
+            <hr>
+            <h2 class=" heading mb-4">Heroku Deployment</h2>
+            <p class="mb-5 lead">Using Heroku has proven to be convenient and efficient. The steps taken to deploy on Heroku's cloud based platform service were:</p>
+            <ul class="mb-5 lead">
+              <li>create heroku acct and link github repo</li>
+              <li>made sure we had all required files and folder structure</li>
+              <li>procfile, requirements.txt, .slugignore(if too much memory is used)</li>
+              <li>tensorflow 2.4.1 took up 400 mb</li>
+              <li>found a loophole, by using tensorflow-cpu so we didnt reach the 500mb max</li>
+              <li>another way was too add .slugignore file for any unused files</li>
+              <li>after multiple deploys, it finally ran perfectly</li>
+            </ul>
 
-
-
-   
-          
           </div>
         </div>
       </div>
