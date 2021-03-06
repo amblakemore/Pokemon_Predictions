@@ -70,8 +70,8 @@
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-              <h1 class="pt-5"><span>Machine Learning</span></h1>
-              <p class="mb-5 w-75 pl-0">Let's make a Pokédex!</p>
+              <h1 class="pt-5"><span>Data</span></h1>
+              <p class="mb-5 w-75 pl-0"></p>
             </div>
           </div>
         </div>
@@ -86,10 +86,6 @@
       <div class="container">
         <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-8 text-left">
-            <h4 class=" heading mb-4">Machine Learning Library</h2>
-            <p class="mb-5 lead">We use Keras from Tensorflow to build our Pokémon classification model.  
-              Tensorflow provides great documentation on Image Classification for anyone to start off! 
-              Minor, albeit time consuming, tweaks were made to our model in order to increase the accuracy of our predictions.  </p>
             
             <h4 class=" heading mb-4">Collecting the Data</h2>
             <p class="mb-5 lead">This was easy since Pokémon data is pretty much everywhere.  We found this <a href="https://www.kaggle.com/lantian773030/pokemonclassification">Kaggle dataset by Lance Zhang</a> that had everything we needed.
@@ -105,58 +101,7 @@
               </p>
               <img src="../static/images/folder_structure.png" width=700> 
 
-            <br>
-            <br>
-            <br>
-
-            <h4 class=" heading mb-4">Image Augmentation</h2>
-            <p class="mb-5 lead"> We applied some Image Augmentation to create new training samples out of existing training data which will improve the 
-              performance and ability of the model to generalize.  Image augmentation is applied only to the training data.
-            </p>
-            <img src="../static/images/data_augmentation.jpg" width=500>
-            <p></p>
-            <img src="../static/images/data_augmentation_sample.jpg" width=500>
-
-            <br>
-            <br>
-            <br>
-
-            <h4 class=" heading mb-4">Create the model</h2>
-              <p class="mb-5 lead">The Sequential model is the simplest model for beginners to start with for neural
-                networks that are composed of a single stack of layers connected sequentially.  
-              </p>
-              <img src="../static/images/model.jpg" width=600>
-          
-            <br>
-            <br>
-            <br>
-
-            <h4 class=" heading mb-4">Compile and train the model</h2>
-            <p class="mb-5 lead">Before we train our model, we will implement the Keras EarlyStopping method.
-              This will stop the training as soon as the validation error reaches a minimum as defined by the patience variable.
-            </p>
-            <img src="../static/images/callback.jpg">
-            <br>
-            <br>
-            <p class="mb-5 lead">Below, we set max epochs to 100 however the model stops at epoch 78 because of the EarlyStopping validation we implemented above.</p>
-            <img src="../static/images/train.jpg">
-            <br>
-            <br>
-            <p class="mb-5 lead">Ideally, we would stop the training as soon as the validation error reaches a minimum.
-              When the validation error stops decreasing and starts to go back up, it is an indication that the model started to overfit the training data.
-              If our model does much better on the training set than on the test set, then we are probably overfitting the data.
-            </p>
-
-          
-
-            <h4 class=" heading mb-4">Training Results</h2>
-              <p class="mb-5 lead">With the help of Plotly, we are able to visualize our training and validation results by epoch from beginning to end.  Let's take a look!
-              </p>  
-            <img src="../static/images/accuracy_v14.png" width=600 height=400>
-            <br>
-            <br>
-            <img src="../static/images/loss_v14.png" width=600 height=400>
-         
+  
           </div>
         </div>
       </div>

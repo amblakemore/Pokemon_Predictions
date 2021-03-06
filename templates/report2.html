@@ -119,8 +119,7 @@
                   <h2 class="heading mb-4">Round 2</h2>
                   <p class="mb-5 lead">In this round, we achieved a training accuracy of about 75% and a training accuracy of about 40%.  
                     Overtime, we can see that the training model steadily improved in accuracy and we managed to more than halve the training and testing loss gap.</p>
-                  <p class="mb-5 lead">What did we do different?  Well, we added Data Augmentation into the mix and introduced an EarlyStopping feature.  
-                    But how could we increase the training accuracy and minimize the loss gap further? Let's add more CNN layers in the next round and see what happens! </p>
+ 
                 </div>
               </div>
               <div class="row">
@@ -137,8 +136,26 @@
                     <div class="media-body">
                     </div>
                   </div>
-                </div>   
-            
+                </div>  
+                <p class="mb-5 lead">What did we do different?  Well, we added Data Augmentation into the mix and introduced an EarlyStopping feature.  
+                   </p>
+                <p class="mb-5 lead"> We applied some Image Augmentation to create new training samples out of existing training data which will improve the 
+                  performance and ability of the model to generalize.  Image augmentation is applied only to the training data.
+                </p>
+                <img src="../static/images/data_augmentation.png" width=500>
+                <p></p>
+                <img src="../static/images/data_augmentation_sample.png" width=500>
+              <p class="mb-5 lead">Before we train our model, we will implement the Keras EarlyStopping method.
+              This will stop the training as soon as the validation error reaches a minimum as defined by the patience variable.
+            </p>
+            <img src="../static/images/callback.png">
+            <br>
+            <br>
+            <p class="mb-5 lead">Below, we set max epochs to 100 however the model stops at epoch 78 because of the EarlyStopping validation we implemented above.</p>
+            <img src="../static/images/train.png">
+            <br>
+            <br>
+            <p class="mb-5 lead">But how could we increase the training accuracy and minimize the loss gap further? Let's add more CNN layers in the next round and see what happens! </p>
             <!-- Round 3 -->
             <div class="row justify-content-center mb-5 element-animate">
               <div class="col--8 text-left">
