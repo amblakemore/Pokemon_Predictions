@@ -93,7 +93,18 @@
             <div class="row justify-content-center mb-5 element-animate">
               <div class="col--8 text-left">
                 <h2 class="heading mb-4">Round 1</h2>
-                <p class="mb-5 lead">With our first model, we achieved a training accuracy near 100%, but a validation accuracy of only about 30%.  Yikes!
+                <p class="mb-5 lead">We started our CNN Sequential model with 11 tried and true layers.</p>
+                        
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="media d-block media-custom text-left">
+                     <a href="#"><img src="../static/images/model1.png" alt="Image Placeholder" class="img-fluid"></a>
+                      <div class="media-body">
+                      </div>
+                   </div>
+                  </div> 
+
+                <p class="mb-5 lead">We achieved a training accuracy near 100%, but a validation accuracy of only about 30%.  Yikes!
                   Also note that our training and validation didn't really do much better after the 10th epoch! Large gaps between the training and test loss are signs of overfitting and in this case we had a gap of 80%.
                   What could we do better in the next round?</p>
               </div>
@@ -117,7 +128,54 @@
               <div class="row justify-content-center mb-5 element-animate">
                 <div class="col--8 text-left">
                   <h2 class="heading mb-4">Round 2</h2>
-                  <p class="mb-5 lead">In this round, we achieved a training accuracy of about 75% and a training accuracy of about 40%.  
+                  <p class="mb-5 lead"> In this round, we added 2 new things to the picture:  Data Augmentation & EarlyStopping</p>
+                  <p class="mb-5 lead"> Data Augmentation creates new training samples out of existing training data which will improve the 
+                    performance and ability of the model to generalize.</p>
+                    
+              
+                  <div class="row">     
+                    <div class="col-md-12">
+                      <div class="media d-block media-custom text-left">
+                        <a href="#"><img src="../static/images/data_augmentation.png" position="absolutetop: 30; left: 70;" alt="Image Placeholder"  ></a>
+                        <div class="media-body">
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="col-md-12">
+                      <div class="media d-block media-custom text-left">
+                        <a href="#"><img src="../static/images/data_augmentation_sample.png" position="absolutetop: 30; left: 70;" alt="Image Placeholder" ></a>
+                        <div class="media-body">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+  
+                <p class="mb-5 lead">We also implemented the Keras EarlyStopping method.
+                This will stop the training as soon as the validation error reaches a minimum as defined by a patience variable which in our case we set to 3. </p>
+  
+                <div class="row">     
+                  <div class="col-md-12">
+                    <div class="media d-block media-custom text-left">
+                      <a href="#"><img src="../static/images/callback.png" position="absolutetop: 30; left: 70;" alt="Image Placeholder"  ></a>
+                      <div class="media-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row">     
+                  <div class="col-md-12">
+                    <div class="media d-block media-custom text-left">
+                      <a href="#"><img src="../static/images/train.png" position="absolutetop: 30; left: 70;" alt="Image Placeholder"  ></a>
+                      <div class="media-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                  <p class="mb-5 lead">In this round, we achieved a training accuracy of about 75% and a testing accuracy of about 40%.  
                     Overtime, we can see that the training model steadily improved in accuracy and we managed to more than halve the training and testing loss gap.</p>
  
                 </div>
@@ -137,31 +195,27 @@
                     </div>
                   </div>
                 </div>  
-                <p class="mb-5 lead">What did we do different?  Well, we added Data Augmentation into the mix and introduced an EarlyStopping feature.  
-                   </p>
-                <p class="mb-5 lead"> We applied some Image Augmentation to create new training samples out of existing training data which will improve the 
-                  performance and ability of the model to generalize.  Image augmentation is applied only to the training data.
-                </p>
-                <img src="../static/images/data_augmentation.png" width=500>
-                <p></p>
-                <img src="../static/images/data_augmentation_sample.png" width=500>
-              <p class="mb-5 lead">Before we train our model, we will implement the Keras EarlyStopping method.
-              This will stop the training as soon as the validation error reaches a minimum as defined by the patience variable.
-            </p>
-            <img src="../static/images/callback.png">
+            
+               
             <br>
-            <br>
-            <p class="mb-5 lead">Below, we set max epochs to 100 however the model stops at epoch 78 because of the EarlyStopping validation we implemented above.</p>
-            <img src="../static/images/train.png">
-            <br>
-            <br>
-            <p class="mb-5 lead">But how could we increase the training accuracy and minimize the loss gap further? Let's add more CNN layers in the next round and see what happens! </p>
+            <p class="mb-5 lead">But how could we increase the training accuracy and minimize the loss gap further?</p>
+            <p class="mb-5 lead">Let's add more CNN layers in the next round and see what happens! </p>
             <!-- Round 3 -->
             <div class="row justify-content-center mb-5 element-animate">
               <div class="col--8 text-left">
                 <h2 class="heading mb-4">Round 3</h2>
+                <p class="mb-5 lead">Let's see what happens when we add 6 more layers.</p>
+          
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media d-block media-custom text-center">
+                     <a href="#"><img src="../static/images/model.png" alt="Image Placeholder" class="img-fluid"></a>
+                      <div class="media-body">
+                      </div>
+                   </div>
+                  </div> 
                 <p class="mb-5 lead">In this round, we achieved a training accuracy of about 27% and testing accuracy of about 20%.  
-                  We set max_epochs to 100 so it didn't go beyond 100 epochs but this is looking more like what we want to see. </p>
+                  We set max_epochs to 100 so it didn't go beyond 100 epochs but the gap between the training and the loss curves is looking much better! </p>
               </div>
             </div>
             <div class="row">
@@ -184,7 +238,7 @@
                 <h2 class="heading mb-4">Conclusion</h2>
                 <p class="mb-5 lead">For the purpose of this project, we went with our version from Round 2 but obviously there is ALOT
                   more that can be done.  We do believe one key factor to improving our model is to increase the amount of images for testing and training since we have 
-                a large amount of classification.  Many suggest each class to contain 1000 images. Currently, we range from 40-70 images per class.  Another key item to further tuning is having the resources to run these training models!</p>
+                a large amount of classification.  Many suggest each class to contain 1000 images. Currently, we range from 40-70 images per class.  Another must-have item to further tuning is having the resources to run these training models!</p>
               </div>
             </div> 
       </div>
